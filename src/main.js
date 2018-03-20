@@ -14,6 +14,8 @@ Vue.use(VueRouter);
 
 import VueResource from 'vue-resource';
 Vue.use(VueResource);
+Vue.http.options.root = 'http://vue.studyit.io'; //全局配置请求根路径
+Vue.http.options.emulateJSON = true; //全局配置post请求时候的表单数据类型
 
 // 导入路由
 import router from './router.js';
