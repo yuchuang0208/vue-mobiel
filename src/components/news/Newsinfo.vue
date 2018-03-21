@@ -2,16 +2,21 @@
   <div class="newsinfo_container">
     <h5>{{newinfolist.title}}</h5>
     <p class="aaa">
-      <span>发表时间：{{newinfolist.add_time}}</span>
+      <span>发表时间：{{newinfolist.add_time | dateFormat}}</span>
       <span>点击次数：{{newinfolist.click}}</span>
     </p>
     <hr>
     <p class="info" v-html="newinfolist.content"></p>
+    <!-- 评论区域 -->
+    <comment-box :id="$route.params.id"></comment-box>
   </div>
 </template>
 
 <script>
     import { Toast } from 'mint-ui';
+
+    //导入评论子组件
+    import comment from '../someChildComponents/comment.vue';
     export default {
       data() {
         return {
@@ -33,6 +38,9 @@
       created() {
         let newid = this.$route.params.id;
         this.getnewsinfo(newid);
+      },
+      components: {
+        'comment-box': comment
       }
     }
 </script>

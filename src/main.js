@@ -20,6 +20,8 @@ Vue.http.options.emulateJSON = true; //全局配置post请求时候的表单数�
 // 导入路由
 import router from './router.js';
 
+//导入过滤器
+import './filters.js';
 
 
 // vue实例
