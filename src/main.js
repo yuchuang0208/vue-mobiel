@@ -2,8 +2,10 @@ import Vue from 'vue';
 // 导入app跟组件
 import app from './App.vue';
 
+//全局注册mint-ui组件
 import Mint from 'mint-ui';
 Vue.use(Mint);
+import 'mint-ui/lib/style.css' //引入mint-ui样式表
 
 import './lib/mui/css/mui.min.css';
 import './lib/mui/css/icons-extra.css';

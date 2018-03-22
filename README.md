@@ -53,3 +53,15 @@
 2. 界面的搭建
 3. 获取评论,添加评论和加载更多评论功能的实现
 4. 添加评论的接口问题,需手动在客户端以创建一个对象的形式unshift到评论数组中
+
+## 图片分享模块的布局
+1. 配置首页跳转路由
+2. 用mui的slider样式来布局顶部滑动区域(出现问题=>报错)
+3. 由于webpack的严格模式,不支持collee,coller和arguments,因此移除严格模式(垃圾,研究半天)
+4. https://www.npmjs.com/package/babel-plugin-transform-remove-strict-mode(解决方法)(解决完了但是有警告,又浪费半天)
+5. http://www.cnblogs.com/pearl07/p/6589114.html(原因),用css样式:touch-action: none解决(又出问题,tabbar不能点了,垃圾)  
+6. mui样式问题导致不能点击tabbar,原因不知道,改了tabbar的样式就可以(可能是类名冲突);
+++ 图片分享数据的获取
+1. 注意获取完渲染的时候注意mui-active样式默认选中问题
+2. 获取图片列表渲染到页面
+3. 使用mint-ui中的Lazy load实现的图片的懒加载
