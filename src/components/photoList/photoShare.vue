@@ -4,7 +4,7 @@
     <div id="slider" class="mui-slider">
         <div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
             <div class="mui-scroll">
-                <a :class="['mui-control-item',item.id == 0?'mui-active':'']" data-wid="tab-top-subpage-1.html" v-for="item in category" :key="item.id">
+                <a @tap="getimglistById(item.id)" :class="['mui-control-item',item.id == 0?'mui-active':'']" data-wid="tab-top-subpage-1.html" v-for="item in category" :key="item.id">
                     {{item.title}}
                 </a>
             </div>
@@ -13,14 +13,14 @@
     
     <!-- 图片区域 -->
     <ul class="lazy-url">
-        <li v-for="item in imglist" :key="item.id"> 
+        <router-link tag="li" v-for="item in imglist" :key="item.id" :to="'/home/photoinfo/'+item.id"> 
             <img v-lazy="item.img_url">
             <!-- img的具体信息 -->
             <div class="img_info">
                 <p>{{item.title}}</p>
                 <span>{{item.zhaiyao}}</span>
             </div>
-        </li>
+        </router-link>
     </ul>
   </div>
 </template>

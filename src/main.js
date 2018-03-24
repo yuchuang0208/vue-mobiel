@@ -7,6 +7,10 @@ import Mint from 'mint-ui';
 Vue.use(Mint);
 import 'mint-ui/lib/style.css' //引入mint-ui样式表
 
+// 注册缩略图插件
+import VuePreview from 'vue-preview';
+Vue.use(VuePreview);
+
 import './lib/mui/css/mui.min.css';
 import './lib/mui/css/icons-extra.css';
 import './lib/mui/fonts/mui-icons-extra.ttf';
