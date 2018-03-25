@@ -17,7 +17,8 @@
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-item-yc" to="/shopcar">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">0</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart">
+        <span class="mui-badge" id="car_num">0</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item-yc" to="/search">
@@ -35,7 +36,7 @@
 <style lang="scss" scoped>
   .app-container {
     padding-top: 40px;
-    padding-bottom: 55px;
+    padding-bottom: 50px;
     overflow: hidden;
   }
   .v-enter {

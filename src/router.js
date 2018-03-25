@@ -11,6 +11,8 @@ import photoShare from './components/photoList/photoShare.vue';
 import photoinfo from './components/photoList/photoinfo.vue';
 import commoditylist from './components/commodity/commoditylist.vue';
 import commoditydetail from './components/commodity/commoditydetail.vue';
+import getdesc from './components/commodity/getdesc.vue';
+import commoditypinglun from './components/commodity/commoditypinglun.vue';
 // 3. 创建路由对象
 var router = new VueRouter({
     routes: [ // 目前这个路由是空的
@@ -25,6 +27,8 @@ var router = new VueRouter({
         { path: '/home/photoinfo/:id', component: photoinfo, name: 'photoinfo' },
         { path: '/home/commoditylist', component: commoditylist, name: 'commoditylist' },
         { path: '/home/commoditydetail/:id', component: commoditydetail, name: 'commoditydetail' },
+        { path: '/home/getdesc/:id', component: getdesc, name: 'getdesc' },
+        { path: '/home/commoditypinglun/:id', component: commoditypinglun, name: 'commoditypinglun' },
     ],
     linkActiveClass: 'mui-active'
 })
