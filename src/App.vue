@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <mt-header fixed title="固定在顶部"></mt-header>
+    <mt-header class="header" fixed title="固定在顶部"></mt-header>
 
     <transition>
       <router-view></router-view>
@@ -79,5 +79,8 @@
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+  .header {
+    z-index: 9999999999999;
   }
 </style>

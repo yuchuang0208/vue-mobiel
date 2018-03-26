@@ -13,6 +13,8 @@ import commoditylist from './components/commodity/commoditylist.vue';
 import commoditydetail from './components/commodity/commoditydetail.vue';
 import getdesc from './components/commodity/getdesc.vue';
 import commoditypinglun from './components/commodity/commoditypinglun.vue';
+
+import movielist from './components/movie/movielist.vue'
 // 3. 创建路由对象
 var router = new VueRouter({
     routes: [ // 目前这个路由是空的
@@ -29,6 +31,7 @@ var router = new VueRouter({
         { path: '/home/commoditydetail/:id', component: commoditydetail, name: 'commoditydetail' },
         { path: '/home/getdesc/:id', component: getdesc, name: 'getdesc' },
         { path: '/home/commoditypinglun/:id', component: commoditypinglun, name: 'commoditypinglun' },
+        { path: '/home/movielist', component: movielist, name: 'movielist' },
     ],
     linkActiveClass: 'mui-active'
 })
