@@ -18,7 +18,7 @@ import movielist from './components/movie/movielist.vue'
 // 3. 创建路由对象
 var router = new VueRouter({
     routes: [ // 目前这个路由是空的
-        { path: '/', component: HomeContainer },
+        { path: '/', redirect: '/home' }, //重定向
         { path: '/home', component: HomeContainer, name: 'HomeContainer' },
         { path: '/member', component: MemberContainer, name: 'MemberContainer' },
         { path: '/shopcar', component: ShopcarContainer, name: 'ShopcarContainer' },
@@ -33,8 +33,8 @@ var router = new VueRouter({
         { path: '/home/commoditypinglun/:id', component: commoditypinglun, name: 'commoditypinglun' },
         { path: '/home/movielist', component: movielist, name: 'movielist' },
     ],
-    linkActiveClass: 'mui-active'
+    linkActiveClass: 'mui-active',
+    // mode: 'history'
 })
 
-// 把路由对象暴露出去
 export default router
